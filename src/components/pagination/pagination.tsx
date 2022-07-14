@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
 import ReactPaginate from 'react-paginate';
 import {usePaginationHook} from './Pagination.hook';
