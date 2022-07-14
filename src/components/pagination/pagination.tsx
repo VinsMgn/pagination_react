@@ -13,16 +13,20 @@ export interface IPaginationProps {
 const Pagination: React.FC<IPaginationProps> = (props: IPaginationProps) => {
     const h = usePaginationHook(props);
     return (
-        <nav className='fr-pagination'>
+        <nav role="navigation" className="fr-pagination" aria-label="Pagination" key="nav-container">
             <ReactPaginate
-                pageClassName='fr-pagination__link fr-pagination__link--lg-label'
+                key="paginate-component"
+                containerClassName="fr-pagination__list"
+                pageClassName='fr-pagination__link'
                 pageLinkClassName='fr-pagination__link'
-                previousClassName='fr-pagination__link fr-pagination__link--lg-label'
-                nextClassName='fr-pagination__link fr-pagination__link--lg-label'
+                previousClassName='fr-pagination__link'
+                nextClassName='fr-pagination__link'
                 nextLabel=">"
+                breakLabel="..."
                 onPageChange={props.callback}
                 pageCount={h.pageCount}
                 previousLabel="<"
+
             />
         </nav>
     )

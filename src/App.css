@@ -4,3 +4,9 @@
   justify-content: center;
   display: flex;
 }
+
+a {
+  /* Le "!important" me permet de surcharger l'attribut css du fichier CSS DSFR qui change le curseur en "not-allowed" des balises a sans href */
+
+  cursor: pointer !important;
+}
