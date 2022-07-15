@@ -14,6 +14,7 @@ const Pagination: React.FC<IPaginationProps> = (props: IPaginationProps) => {
     return (
         <nav role="navigation" className="fr-pagination" aria-label="Pagination" key="nav-container">
             <ReactPaginate
+                hrefBuilder={() => '#'}
                 key="paginate-component"
                 containerClassName="fr-pagination__list"
                 pageClassName='fr-pagination__link'
